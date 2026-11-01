@@ -79,21 +79,21 @@ def afundados(frota,tabuleiro):
 
     return quant
 
-    def posicao_valida(frota,linha,coluna,orientacao,tamanho):
-        posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
+def posicao_valida(frota,linha,coluna,orientacao,tamanho):
+    posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
 
-        for posicao in posicoes:
-            linha = posicao[0]
-            coluna = posicao[1]
+    for posicao in posicoes:
+        linha = posicao[0]
+        coluna = posicao[1]
 
-            if linha < 0 or linha > 9 or coluna < 0 or coluna > 9:
-                return False
+        if linha < 0 or linha > 9 or coluna < 0 or coluna > 9:
+            return False
 
             
-            for nomenav in frota:
-                for navio in frota[nomenav]:
-                    if posicao in navio:
-                        return False
+        for nomenav in frota:
+            for navio in frota[nomenav]:
+                if posicao in navio:
+                    return False
 
 
         return True
