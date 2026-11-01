@@ -79,7 +79,7 @@ def afundados(frota,tabuleiro):
 
     return quant
 
-    def posicao_valida(frota,linha,orientacao,tamanho):
+    def posicao_valida(frota,linha,coluna,orientacao,tamanho):
         posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
 
         for posicao in posicoes:
@@ -96,4 +96,4 @@ def afundados(frota,tabuleiro):
                         return False
 
 
-            return True
+        return True
