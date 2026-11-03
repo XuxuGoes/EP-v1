@@ -79,6 +79,12 @@ while jogando == True:
 
         coluna = int(input('Jogador, qual coluna deseja atacar? '))
 
+        while coluna < 0 or coluna > 9:
+            print('Coluna inválida!')
+            coluna = int(input('Jogador, qual coluna deseja atacar? '))
+
+        posicao = [linha, coluna]
+
         if posicao in jogadas:
             print(f'A posição linha {linha} e coluna {coluna} já foi informada anteriormente!')
         else:
@@ -90,8 +96,3 @@ while jogando == True:
     if afundados(frota_oponente, tabuleiro_oponente) == 10:
         print('Parabéns! Você derrubou todos os navios do seu oponente!')
         jogando = False
-        
-
-
-        
-    
