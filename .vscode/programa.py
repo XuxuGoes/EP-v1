@@ -1,3 +1,4 @@
+from funcoes import posiciona_frota, faz_jogada, afundados, monta_tabuleiros
 from funcoes import posicao_valida, preenche_frota
 
 frota = {}
