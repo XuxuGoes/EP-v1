@@ -22,10 +22,10 @@ for i in range(4):
             linha = int(input('Linha: '))
             coluna = int(input('Coluna: '))
 
-            if nomenav == 'submarino':
+            if tamanho == 1:
                 orientacao = 'vertical'
             else:
-                escolha = int(input('[1] Vertical [2] Horizontal >'))
+                escolha = int(input('Orientação: [1] Vertical [2] Horizontal '))
 
                 if escolha == 1:
                     orientacao = 'vertical'
