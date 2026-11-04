@@ -66,6 +66,7 @@ tabuleiro_jogador = posiciona_frota(frota)
 tabuleiro_oponente = posiciona_frota(frota_oponente)
 
 jogadas = []
+jogadas_oponente = []
 jogando = True
 
 while jogando == True:
