@@ -97,7 +97,7 @@ while jogando == True:
 
     tabuleiro_oponente = faz_jogada(tabuleiro_oponente, linha, coluna)
 
-        quant = afundados(frota_oponente, tabuleiro_oponente)
+    quant = afundados(frota_oponente, tabuleiro_oponente)
 
     if quant == 10:
         print('Parabéns! Você derrubou todos os navios do seu oponente!')
