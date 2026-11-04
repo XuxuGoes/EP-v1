@@ -1,3 +1,4 @@
+import random
 
 from funcoes import posicao_valida, preenche_frota
 from funcoes import posiciona_frota, faz_jogada, afundados, monta_tabuleiros
