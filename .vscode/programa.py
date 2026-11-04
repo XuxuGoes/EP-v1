@@ -1,3 +1,4 @@
+
 from funcoes import posicao_valida, preenche_frota
 from funcoes import posiciona_frota, faz_jogada, afundados, monta_tabuleiros
 
@@ -95,8 +96,31 @@ while jogando == True:
 
     tabuleiro_oponente = faz_jogada(tabuleiro_oponente, linha, coluna)
 
-    quant = afundados(frota_oponente, tabuleiro_oponente)
+        quant = afundados(frota_oponente, tabuleiro_oponente)
 
     if quant == 10:
         print('Parabéns! Você derrubou todos os navios do seu oponente!')
         jogando = False
+
+    else:
+        nova = False
+
+        while nova == False:
+            linha = random.randint(0, 9)
+            coluna = random.randint(0, 9)
+
+            posicao = [linha, coluna]
+
+            if posicao not in jogadas_oponente:
+                jogadas_oponente.append(posicao)
+                nova = True
+
+        print(f'Seu oponente está atacando na linha {linha} e coluna {coluna}')
+
+        tabuleiro_jogador = faz_jogada(tabuleiro_jogador, linha, coluna)
+
+        quant = afundados(frota, tabuleiro_jogador)
+
+        if quant == 10:
+            print('Xi! O oponente derrubou toda a sua frota =(')
+            jogando = False
